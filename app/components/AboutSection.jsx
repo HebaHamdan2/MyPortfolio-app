@@ -73,13 +73,13 @@ export const AboutSection = () => {
       <div className='mt-4 md:mt-0 text-left flex flex-col h-full '>
         <h2 className='text-4xl font-bold text-white mb-4'>About me</h2>
         <p className='text-base lg:text-lg '>
-        I am a Computer Systems Engineer with a strong foundation in Object-Oriented Programming (OOP) 
-and expertise in both frontend and backend web development. Skilled in algorithms, data 
-structures, and problem-solving, I am committed to continuous learning and eager to contribute to 
-a dynamic and innovative environment
+          I am a Computer Systems Engineer with a strong foundation in Object-Oriented Programming (OOP)
+          and expertise in both frontend and backend web development. Skilled in algorithms, data
+          structures, and problem-solving, I am committed to continuous learning and eager to contribute to
+          a dynamic and innovative environment
         </p>
         <div className="flex flex-row justify-start mt-8">
-       
+
           <TabButton selectTab={() => handelTabChange("education")}
             active={tab === "education"}>
             {" "}

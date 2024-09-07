@@ -12,7 +12,6 @@ const HeroSection = () => {
 <br />
   <TypeAnimation
       sequence={[
-        // Same substring at the start will only be typed out once, initially
         'Heba Hamdan',
         1000,
         'Software Engineer',
@@ -26,7 +25,7 @@ const HeroSection = () => {
       ]}
       wrapper="span"
       speed={50}
-        repeat={Infinity}
+      repeat={Infinity}
     /></h1>
     <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa magni nemo.
@@ -40,8 +39,7 @@ const HeroSection = () => {
  </div>
 <div className="col-span-5 place-self-center mt-4 lg:mt-0">
   <div className="rounded-full bg-[#181818] w-[250px] h-[250px] relative lg:h-[400px] lg:w-[400px]">
-    {/* <Image src="/images/heba" alt="heba hamdan" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" width={300} height={300} /> */}
-
+    <Image src="/images/heba.png" alt="heba hamdan" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" width={300} height={300} />
   </div>
   </div>
   </div>
