@@ -2,7 +2,8 @@
 import Image from 'next/image.js'
 import Link from 'next/link.js'
 import React, { useState } from 'react'
-
+import LinkedinIcon from "../../public/linkedin-icon.svg";
+import GithubIcon from "../../public/github-icon.svg";
 export const EmailSection = () => {
   const [isSubmit,setIsSubmit]=useState(false);
   const handleSubmit= async(e)=>{
@@ -38,11 +39,11 @@ export const EmailSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perspiciatis eum natus quia labore iste enim officiis sequi quam nulla, cum quasi impedit eos placeat blanditiis beatae animi quos accusamus!
         </p>
         <div className='socials flex flex-row gap-2'>
-          <Link href="">
-          <Image src="" alt="Github" />
+          <Link href="https://github.com/HebaHamdan2">
+          <Image src={GithubIcon}  alt="Github" />
           </Link>
-          <Link href="">
-          <Image src="" alt="LinkedIn" />
+          <Link href="https://www.linkedin.com/in/heba-hamdan2">
+          <Image src={LinkedinIcon} alt="LinkedIn" />
           </Link>
         </div>
         </div>
