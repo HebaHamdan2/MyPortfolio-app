@@ -1,7 +1,8 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { ProjectCard } from './ProjectCard.jsx';
 import { ProjectTag } from './ProjectTag.jsx';
+import { motion, useInView } from "framer-motion"
 const projectsData = [
   {
     id: 1,
@@ -60,24 +61,53 @@ const projectsData = [
 ];
 
 export const ProjectsSection = () => {
-  const [tag,setTag]=useState('All');
-  const handleTagChange=(newTag)=>{
+  const [tag, setTag] = useState('All');
+  const ref = useRef(null);
+  const isInView = (ref, { once: true });//once the section in the view 
+  const handleTagChange = (newTag) => {
     setTag(newTag);
   }
-  const filterProjects=projectsData.filter((project)=>
+  const filterProjects = projectsData.filter((project) =>
     project.tag.includes(tag))
 
-  return (
-<>
-<h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>My Projects</h2>
-<div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
 
-<ProjectTag onClick={handleTagChange} name="All" isSelected={tag==='All'} />
-<ProjectTag onClick={handleTagChange} name="Full Stack" isSelected={tag==='Full Stack'} />
-<ProjectTag onClick={handleTagChange} name="Frontend" isSelected={tag==='Frontend'} />
-<ProjectTag onClick={handleTagChange} name="Backend" isSelected={tag==='Backend'} />
-</div>
-<div className='grid md:grid-cols-3 gap-8 md:gap-12'>{filterProjects.map((project)=><ProjectCard key={project.id} title={project.title} description={project.description} imgUrl={project.image} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />)}</div>
-</>
-  )
+
+  return (
+    <section id="projects">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+        My Projects
+      </h2>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+        <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === 'All'} />
+        <ProjectTag onClick={handleTagChange} name="Full Stack" isSelected={tag === 'Full Stack'} />
+        <ProjectTag onClick={handleTagChange} name="Frontend" isSelected={tag === 'Frontend'} />
+        <ProjectTag onClick={handleTagChange} name="Backend" isSelected={tag === 'Backend'} />
+      </div>
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filterProjects.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          </motion.li>
+        ))}
+      </ul>
+    </section>
+
+  );
 }
