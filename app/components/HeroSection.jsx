@@ -43,7 +43,11 @@ const HeroSection = () => {
   animate={{opacity:1 , scale:1}}
    transition={{duration:0.5}} className="col-span-4 place-self-center mt-4 lg:mt-0">
   <div className="rounded-full bg-[#181818] w-[200px] h-[200px] relative lg:h-[400px] lg:w-[400px]">
-    <Image src="/images/heba.png" alt="heba hamdan" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" width={320} height={300} />
+    <Image src="/images/heba.png" alt="heba hamdan" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full h-auto" 
+           width="0"
+           height="0"
+           sizes="95vw"
+    priority />
   </div>
   </motion.div>
   </div>

@@ -64,9 +64,11 @@ export const AboutSection = () => {
     <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
       <Image
         src="/images/IMG_0999.jpg"
-        width={350}
-        height={350}
-        alt="heba"
+        alt="heba hamdan"
+        width="0"
+    height="0"
+    sizes="100vw"
+    className="w-full h-auto"
       />
       <div className='mt-4 md:mt-0 text-left flex flex-col h-full '>
         <h2 className='text-3xl font-bold text-white mt-2 mb-4'>About me</h2>
