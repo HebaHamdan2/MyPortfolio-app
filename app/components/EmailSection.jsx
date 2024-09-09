@@ -6,30 +6,41 @@ import LinkedinIcon from "../../public/linkedin-icon.svg";
 import GithubIcon from "../../public/github-icon.svg";
 export const EmailSection = () => {
   const [isSubmit,setIsSubmit]=useState(false);
-  const handleSubmit= async(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data={
-      email:e.target.email.value,
-      subject:e.target.subject.value,
-      message:e.target.message.value
-    }
-    const JSONdata=JSON.stringify(data);
-    const endPoint="api/send";
-    const options={
-      method:'POST',
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body:JSONdata
-    }
-    const response=await fetch(endPoint,options);
-    const res=await response.json();
-    if(response.status===200){
-      setIsSubmit(true);
-      console.log('Message sent.')
 
+    const data = {
+        email: e.target.email.value,
+        subject: e.target.subject.value,
+        message: e.target.message.value
+    };
+
+    const JSONdata = JSON.stringify(data);
+    const endpoint = "/api/contact";
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSONdata
+    };
+
+    try {
+        const response = await fetch(endpoint, options);
+        const res = await response.json();
+
+        if (response.ok) {
+            setIsSubmit(true);
+            console.log('Message sent.');
+        } else {
+            alert(`Error sending email: ${res.error}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An unexpected error occurred.');
     }
-  }
+};
+
 
   return (
     <section className='grid md:grid-cols-2 my-12 py-24 gap-4' id="contact">

@@ -25,7 +25,7 @@ export const Navbar = () => {
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
     <div className='flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-20 py-2 '>
     <Link href="/">
- <Image src="/images/logo1.png" width={200} height={100} alt='logo' className='cursor-pointer'/>
+ <Image src="/images/logo1.png" width={100} height={100} alt='logo' className='cursor-pointer'/>
 </Link>
             <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
