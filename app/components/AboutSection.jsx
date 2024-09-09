@@ -8,12 +8,12 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>2020 - 2024 Bachelor of Computer Systems Engineering <br />
+        <li> <strong className='pr-2'> 2020 - 2024 </strong> Bachelor of Computer Systems Engineering <br />
           Palestine Technical University – Kadoorie
           <br />
           Tulkarm, Palestine</li>
         <br />
-        <li>2019 - 2020 Tawjihi (Scientific Stream) <br />
+        <li> <strong className='pr-2'>2019 - 2020</strong>  Tawjihi (Scientific Stream) <br />
           AL-Shayma’ School
           <br />
           Qalqilya,Palestine</li>
@@ -24,7 +24,7 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-8">
+      <ul className="list-disc pl-2">
         <li className='py-1'>Programming Languages: C++, Java, JavaScript </li>
         <li className='py-1'>Frontend Development: React.js, HTML,
           CSS, Bootstrap, Tailwind</li>
@@ -56,6 +56,7 @@ export const AboutSection = () => {
   const handelTabChange = (id) => {
     startTransaction(() => {
       setTab(id);
+      
     })
   }
 
@@ -63,16 +64,15 @@ export const AboutSection = () => {
     <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
       <Image
         src="/images/IMG_0999.jpg"
-        width={400}
-        height={400}
+        width={350}
+        height={350}
         alt="heba"
       />
       <div className='mt-4 md:mt-0 text-left flex flex-col h-full '>
-        <h2 className='text-4xl font-bold text-white mb-4'>About me</h2>
-        <p className='text-base lg:text-lg '>
-        I am a Computer Systems Engineer with strong expertise in Object-Oriented Programming and both frontend and backend web development. Skilled in algorithms and problem-solving, I am committed to continuous learning and eager to contribute to innovative projects.
-        </p>
-        <div className="flex flex-row justify-start mt-8">
+        <h2 className='text-3xl font-bold text-white mt-2 mb-4'>About me</h2>
+        <p className='text-base  lg:text-lg'>
+        I am a Computer Systems Engineer with expertise in both frontend and backend web development. Beyond this, I am passionate about problem-solving and committed to organizing and scheduling tasks accurately, ensuring my work and code are clean, efficient, and well-structured.
+          </p>       <div className="flex flex-row justify-start mt-8">
 
           <TabButton selectTab={() => handelTabChange("education")}
             active={tab === "education"}>

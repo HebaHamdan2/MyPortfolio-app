@@ -6,8 +6,8 @@ import { motion, useInView } from "framer-motion"
 const projectsData = [
   {
     id: 1,
-    title: "ECG Analyzer Application",
-    description: "Project 1 description",
+    title: "ECG Analyzer",
+    description: "Web application developed as part of my bachelor's degree project, predicts heart diseases from uploaded electrocardiogram images using ResNet50, a deep learning model with 94.84% accuracy.",
     image: "/images/projects/ECGAnalyzer.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/HebaHamdan2/Developing-an-ECG-Analyzer-System-using-AI-in-Palestine",
@@ -15,8 +15,8 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Chatvia app",
-    description: "Project 2 description",
+    title: "Chatvia",
+    description: "real-time chat application that enables users to chat with each other and see who is online after signing up or logging in.User accounts are personalized with unique usernames and avatars based on gender and name.",
     image: "/images/projects/chatvia.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/HebaHamdan2/Chatvia-MERN",
@@ -24,8 +24,8 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Movify Application",
-    description: "Project 3 description",
+    title: "Movify",
+    description: "Web application for exploring movies and TV shows, featuring trending and upcoming content, detailed information, trailers, ratings, and images. Includes login functionality for managing favorites and watch lists.",
     image: "/images/projects/movify.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/HebaHamdan2/movify",
@@ -33,31 +33,96 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Evaluate news article Application",
-    description: "Project 4 description",
+    title: "Steak House Dashboard",
+    description: "A real-world management system built with PHP. It manages customers, sends birthday celebration messages, creates transactions, and more.",
+    image: "/images/projects/SteackHouse.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "https://github.com/HebaHamdan2/movify",
+    previewUrl: "/",
+  },
+  {
+    id: 5,
+    title: "Evaluate news article",
+    description: "Single-page app for the Udacity Nanodegree analyzes the sentiment of news articles from a URL using the MeaningCloud API.",
     image: "/images/projects/evaluateNewsArticle.png",
     tag: ["All", "Frontend"],
     gitUrl: "https://github.com/HebaHamdan2/evaluate-a-news-article-with-NLP",
     previewUrl: "/",
   },
   {
-    id: 5,
-    title: "Saraha node js api",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/saraha.png",
-    tag: ["All", "Backend"],
-    gitUrl: "https://github.com/HebaHamdan2/saraha",
+    id: 6,
+    title: "Travel Planner",
+    description:"Single-page app for the Udacity Nanodegree to manage trips. It provides weather updates using Geonames and Weatherbit APIs and fetches destination images via the Pixabay API.",
+    image: "/images/projects/travelPlanner.png",
+    tag: ["All", "Frontend"],
+    gitUrl: "https://github.com/HebaHamdan2/travel-planner-app",
     previewUrl: "/",
   },
-  // {
-  //   id: 6,
-  //   title: "Full-stack Roadmap",
-  //   description: "Project 5 description",
-  //   image: "/images/projects/6.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
+  {
+    id: 7,
+    title: "Coffe Shop",
+    description: " Website that provides information about the coffee shop, its history, popular products, customer opinions and ratings. Users can also add and remove products from their cart.",
+    image: "/images/projects/coffeeShop.png",
+    tag: ["All", "Frontend"],
+    gitUrl: "https://github.com/HebaHamdan2/coffee-shop",
+    previewUrl: "https://coffeeshopheba.netlify.app/",
+  },
+  {
+    id: 8,
+    title: "Sociala.",
+    description: "Home page for a social media clone built with Bootstrap, HTML, CSS, and jQuery.",
+    image: "/images/projects/Sociala.png",
+    tag: ["All", "Frontend"],
+    gitUrl: "https://github.com/HebaHamdan2/Sociala.",
+    previewUrl: "/",
+  },
+  {
+    id: 9,
+    title: "Eduma",
+    description: "Education website clone built with Bootstrap, HTML, CSS, and jQuery.",
+    image: "/images/projects/eduma.png",
+    tag: ["All", "Frontend"],
+    gitUrl: "https://github.com/HebaHamdan2/Eduma",
+    previewUrl: "https://eduma-hebahamdan.netlify.app/",
+  },
+  {
+    id: 10,
+    title: "E-commerce node js api",
+    description: "",
+    image: "/images/projects/ecommerce.png",
+    tag: [ "Backend"],
+    gitUrl: "https://github.com/HebaHamdan2/ecommerce",
+    previewUrl: "https://documenter.getpostman.com/view/28559046/2s9YRB4D3y",
+  },
+  {
+    id: 11,
+    title: "Photographer Booking node js api",
+    description: "",
+    image: "/images/projects/photographerBooking.png",
+    tag: [ "Backend"],
+    gitUrl: "https://github.com/HebaHamdan2/Photographer-Booking-Nodejs",
+    previewUrl: "https://documenter.getpostman.com/view/28559046/2s9YkrZyf9",
+  },
+  {
+    id: 12,
+    title: "Saraha node js api",
+    description: "",
+    image: "/images/projects/saraha.png",
+    tag: ["Backend"],
+    gitUrl: "https://github.com/HebaHamdan2/saraha",
+    previewUrl: "https://documenter.getpostman.com/view/28559046/2s9YJaZQGg",
+  },
+  {
+    id: 13,
+    title: "Upvote node js api",
+    description: "",
+    image: "/images/projects/upvote.png",
+    tag: [ "Backend"],
+    gitUrl: "https://github.com/HebaHamdan2/upvote",
+    previewUrl: "/",
+  },
+
+
 ];
 
 export const ProjectsSection = () => {
@@ -78,7 +143,7 @@ export const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-3xl font-bold text-white mt-4 mb-8 md:mb-6">
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
