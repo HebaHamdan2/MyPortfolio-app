@@ -37,7 +37,7 @@ const projectsData = [
     description: "A real-world management system built with PHP. It manages customers, sends birthday celebration messages, creates transactions, and more.",
     image: "/images/projects/SteackHouse.png",
     tag: ["All", "Full Stack"],
-    gitUrl: "https://github.com/HebaHamdan2/movify",
+    gitUrl: "/",
     previewUrl: "/",
   },
   {

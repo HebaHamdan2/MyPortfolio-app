@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import NavLink from './NavLink.jsx';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from './MenuOverlay.jsx';
+import Image from 'next/image.js';
 const navLinks = [
     {
       title: "About",
@@ -24,8 +25,9 @@ export const Navbar = () => {
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
     <div className='flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-20 py-2 '>
-    <Link href="/" className='font-semibold hover:text-pink-300 text-2xl text-white 'onClick={() => handleClick("/")} >
+    <Link href="/" className='font-semibold hover:text-pink-300 text-xl text-white '>
 HEBA HAMDAN
+
 </Link>
             <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

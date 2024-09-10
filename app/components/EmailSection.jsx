@@ -1,11 +1,14 @@
 "use client"
 import Image from 'next/image.js'
 import Link from 'next/link.js'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import GithubIcon from "../../public/github-icon.svg";
+import LeetCodeIcon from "../../public/leetcode.svg"
 export const EmailSection = () => {
   const [isSubmit,setIsSubmit]=useState(false);
+  const formRef = useRef(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,8 +33,13 @@ export const EmailSection = () => {
         const res = await response.json();
 
         if (response.ok) {
+            if (formRef.current) {
+              formRef.current.reset();
+            }
             setIsSubmit(true);
-            console.log('Message sent.');
+            setTimeout(() => {
+              setIsSubmit(false);
+            }, 3000);
         } else {
             alert(`Error sending email: ${res.error}`);
         }
@@ -57,10 +65,13 @@ export const EmailSection = () => {
           <Link href="https://www.linkedin.com/in/heba-hamdan2">
           <Image src={LinkedinIcon} alt="LinkedIn" />
           </Link>
+          <Link href="https://leetcode.com/u/hebahamdan296/">
+          <Image src={LeetCodeIcon} alt="LinkedIn" width="48" height="40" />
+          </Link>
         </div>
         </div>
         <div>
-          <form className='flex flex-col' onSubmit={handleSubmit}>
+          <form className='flex flex-col' ref={formRef} onSubmit={handleSubmit}>
             <div className='mb-6'>
             <label htmlFor="email" className='text-white block text-sm mb-2 font-medium'>Your email</label>
             <input type="email" name='email' id="email" required placeholder='user@gmail.com' className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg  block w-full p-2.5 ' />
