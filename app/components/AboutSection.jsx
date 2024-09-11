@@ -61,16 +61,16 @@ export const AboutSection = () => {
   }
 
   return <section className='text-white' id="about">
-    <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+    <div className="md:grid md:grid-cols-2 gap-8 items-center py-8  px-4 xl:gap-1 sm:py-16 xl:px-8">
       <Image
         src="/images/IMG_0999.jpg"
         alt="heba hamdan"
         width="0"
     height="0"
     sizes="100vw"
-    className="w-full h-auto"
+    className="w-96 h-auto"
       />
-      <div className='mt-4 md:mt-0 text-left flex flex-col h-full '>
+      <div className='mt-8 md:mt-0 text-left flex  flex-col h-full '>
         <h2 className='text-3xl font-bold text-white mt-2 mb-4'>About me</h2>
         <p className='text-base  lg:text-lg'>
         I am a Computer Systems Engineer with expertise in both frontend and backend web development. Beyond this, I am passionate about problem-solving and committed to organizing and scheduling tasks accurately, ensuring my work and code are clean, efficient, and well-structured.
