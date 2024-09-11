@@ -7,11 +7,12 @@ import GithubIcon from "../../public/github-icon.svg";
 import LeetCodeIcon from "../../public/leetcode.svg"
 export const EmailSection = () => {
   const [isSubmit,setIsSubmit]=useState(false);
+  const [loading, setLoading] = useState(false);
   const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     const data = {
         email: e.target.email.value,
         subject: e.target.subject.value,
@@ -46,6 +47,8 @@ export const EmailSection = () => {
     } catch (error) {
         console.error('Error:', error);
         alert('An unexpected error occurred.');
+    } finally {
+      setLoading(false); 
     }
 };
 
@@ -65,8 +68,9 @@ export const EmailSection = () => {
           <Link href="https://www.linkedin.com/in/heba-hamdan2">
           <Image src={LinkedinIcon} alt="LinkedIn" />
           </Link>
-          <Link href="https://leetcode.com/u/hebahamdan296/">
-          <Image src={LeetCodeIcon} alt="LinkedIn" width="48" height="40" />
+      
+          <Link className='pt-1' href="https://leetcode.com/u/hebahamdan296/">
+          <Image src={LeetCodeIcon} alt="LinkedIn" width="40" height="40" />
           </Link>
         </div>
         </div>
@@ -87,11 +91,9 @@ export const EmailSection = () => {
               <textarea name="message" id="message" className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg  block w-full p-2.5' placeholder='Leave your message here...'/>
             </div>
             <button type='submit' className='bg-pink-300 hover:bg-pink-400 text-white font-medium py-2.5 px-5 rounded-lg w-full ' >Send Message</button>
-          {
-            isSubmit&&(
-              <p className='text-green-500 text-sm mt-2'>Email sent successfully!</p>
-            )
-          }
+            {loading && <p className='text-pink-300 text-sm mt-2'>Sending your message...</p>}
+          {isSubmit && !loading && <p className='text-green-300 text-sm mt-2'>Email sent successfully!</p>}
+
           </form>
         </div>
         </section>

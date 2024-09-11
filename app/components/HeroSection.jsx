@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import {motion} from "framer-motion"
+import Link from 'next/link.js';
 const HeroSection = () => {
   return <section className='lg:py-16'>
   <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -20,12 +21,13 @@ const HeroSection = () => {
         'Heba Hamdan',
         1000,
         'Software Engineer',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        1000,
         'Frontend Developer',
         1000,
         'Backend Developer',
         1000,
         'Problem Solver',
+        1000,
         
       ]}
       wrapper="span"
@@ -37,7 +39,8 @@ const HeroSection = () => {
 
    
     <div>
-    <button className='px-6 py-3  w-fit rounded-full mr-4 bg-gradient-to-br from-pink-300 via-pink-400  to-pink-500 hover:bg-slate-200 text-white'>Hire Me</button>
+    <button className='px-6 py-3  w-fit rounded-full mr-4 bg-gradient-to-br from-pink-300 via-pink-400  to-pink-500 hover:bg-slate-200 text-white'>
+      <Link href="mailto:hebashamdan2@gmail.com">Hire Me</Link></button>
        <button className='px-1 py-1 w-fit rounded-full bg-gradient-to-br from-pink-300 via-pink-400   hover:bg-slate-800 text-white mt-3'>
       <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'> Download CV</span>
         </button>
@@ -51,7 +54,7 @@ const HeroSection = () => {
     <Image src="/images/heba.png" alt="heba hamdan" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full h-auto" 
            width="0"
            height="0"
-           sizes="95vw"
+           sizes="90vw"
     priority />
   </div>
   </motion.div>
