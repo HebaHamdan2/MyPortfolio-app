@@ -41,15 +41,15 @@ const projectsData = [
     gitUrl: "https://github.com/HebaHamdan2/movify",
     previewUrl: "/",
   },
-  // {
-  //   id: 5,
-  //   title: "Steak House Dashboard",
-  //   description: "A real-world management system built with PHP. It manages customers, sends birthday celebration messages, creates transactions, and more.",
-  //   image: "/images/projects/SteackHouse.png",
-  //   tag: ["All", "Full Stack"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
+  {
+    id: 5,
+    title: "My Personal Blog using Nextjs",
+    description: "Beautifully designed, responsive blog built entirely with HTML and CSS.",
+    image: "/images/projects/blogApp.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "https://github.com/HebaHamdan2/MyPersonalBlog-App",
+    previewUrl: "https://hebablogsapp-hebas-projects-a9daf66d.vercel.app/",
+  },
   {
     id: 6,
     title: "Evaluate news article",
@@ -140,13 +140,14 @@ const projectsData = [
     gitUrl: "https://github.com/HebaHamdan2/EverydayFlowers-Blog",
     previewUrl: "https://everydayflowersblog.netlify.app/",
   },
+ 
 
 ];
 
 export const ProjectsSection = () => {
   const [tag, setTag] = useState('Full Stack');
   const ref = useRef(null);
-  const isInView = (ref, { once: true });//once the section in the view 
+  const isInView = (ref, { once: true });
   const handleTagChange = (newTag) => {
     setTag(newTag);
   }
