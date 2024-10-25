@@ -16,7 +16,7 @@ const TAB_DATA = [
         <li> <strong className='pr-2'>2019 - 2020</strong>  Tawjihi (Scientific Stream) <br />
           AL-Shayma’ School
           <br />
-          Qalqilya,Palestine</li>
+          Qalqilya, Palestine</li>
       </ul>
     ),
   },
@@ -44,7 +44,7 @@ const TAB_DATA = [
         <li className='py-1'>Back-end with Nodejs from Knowledge Academy</li>
         <li className='py-1'>Front End Web Developer from Udacity</li>
         <li className='py-1'>Python for Data Science and Machine Learning from Udemy</li>
-        <li className='py-1'>100 Days Badge 2024 from LeetCode</li>
+        <li className='py-1'>200 Days Badge 2024 from LeetCode</li>
       </ul>
     ),
   },

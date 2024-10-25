@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react'
 import { ProjectCard } from './ProjectCard.jsx';
 import { ProjectTag } from './ProjectTag.jsx';
-import { motion, useInView } from "framer-motion"
+import { motion } from "framer-motion"
 const projectsData = [
   {
     id: 1,
@@ -44,7 +44,7 @@ const projectsData = [
   {
     id: 5,
     title: "My Personal Blog using Nextjs",
-    description: "Beautifully designed, responsive blog built entirely with HTML and CSS.",
+    description: "Welcome to my blog, built with Next.js! This project includes an admin dashboard for easy management of posts. Admin users can effortlessly add and delete articles across lifestyle, technology, and startup topics.",
     image: "/images/projects/blogApp.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/HebaHamdan2/MyPersonalBlog-App",
