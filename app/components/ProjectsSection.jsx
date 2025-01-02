@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: "Portfolio",
     description: "Welcome to my professional portfolio, crafted with Next.js 14 for a polished, interactive experience. Explore my career journey, including detailed insights into my skills, achievements, and projects.",
-    image: "/images/projects/portfolio.png",
+    image: "/images/projects/portfolioProj.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/HebaHamdan2/portfolio",
     previewUrl: "https://hebahamdan.vercel.app/",
