@@ -25,6 +25,15 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "Draw Insight",
+    description: "Web application designed to provide parents with insights into their children's psychological health through analysis of their drawings, powered by a highly accurate model with 95.99% precision.",
+    image: "/images/projects/DrawInsight.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "https://github.com/HebaHamdan2/Draw-Insight-app",
+    previewUrl: "https://www.linkedin.com/posts/heba-hamdan2_after-months-of-hard-work-im-thrilled-to-activity-7286664108307795968-XKPV?utm_source=share&utm_medium=member_desktop",
+  },
+  {
+    id: 4,
     title: "Chatvia",
     description: "real-time chat application that enables users to chat with each other and see who is online after signing up or logging in.User accounts are personalized with unique usernames and avatars based on gender and name.",
     image: "/images/projects/chatvia.png",
@@ -33,7 +42,7 @@ const projectsData = [
     previewUrl: "https://chatvia-mern.onrender.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Movify",
     description: "Web application for exploring movies and TV shows, featuring trending and upcoming content, detailed information, trailers, ratings, and images. Includes login functionality for managing favorites and watch lists.",
     image: "/images/projects/movify.png",
@@ -42,7 +51,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 5,
+    id: 6,
     title: "My Personal Blog using Nextjs",
     description: "Welcome to my blog, built with Next.js! This project includes an admin dashboard for easy management of posts. Admin users can effortlessly add and delete articles across lifestyle, technology, and startup topics.",
     image: "/images/projects/blogApp.png",
@@ -51,7 +60,7 @@ const projectsData = [
     previewUrl: "https://hebablogsapp-hebas-projects-a9daf66d.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Evaluate news article",
     description: "Single-page app for the Udacity Nanodegree analyzes the sentiment of news articles from a URL using the MeaningCloud API.",
     image: "/images/projects/evaluateNewsArticle.png",
@@ -60,7 +69,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Travel Planner",
     description:"Single-page app for the Udacity Nanodegree to manage trips. It provides weather updates using Geonames and Weatherbit APIs and fetches destination images via the Pixabay API.",
     image: "/images/projects/travelPlanner.png",
@@ -69,7 +78,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Coffe Shop",
     description: " Website that provides information about the coffee shop, its history, popular products, customer opinions and ratings. Users can also add and remove products from their cart.",
     image: "/images/projects/coffeeShop.png",
@@ -78,7 +87,7 @@ const projectsData = [
     previewUrl: "https://coffeeshopheba.netlify.app/",
   },
   {
-    id: 9,
+    id: 10,
     title: "Sociala.",
     description: "Home page for a social media clone built with Bootstrap, HTML, CSS, and jQuery.",
     image: "/images/projects/Sociala.png",
@@ -87,7 +96,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 10,
+    id: 11,
     title: "Eduma",
     description: "Education website clone built with Bootstrap, HTML, CSS, and jQuery.",
     image: "/images/projects/eduma.png",
@@ -96,7 +105,7 @@ const projectsData = [
     previewUrl: "https://eduma-hebahamdan.netlify.app/",
   },
   {
-    id: 11,
+    id: 12,
     title: "E-commerce node js api",
     description: "",
     image: "/images/projects/ecommerce.png",
@@ -105,7 +114,7 @@ const projectsData = [
     previewUrl: "https://documenter.getpostman.com/view/28559046/2s9YRB4D3y",
   },
   {
-    id: 12,
+    id: 13,
     title: "Photographer Booking node js api",
     description: "",
     image: "/images/projects/photographerBooking.png",
@@ -114,7 +123,7 @@ const projectsData = [
     previewUrl: "https://documenter.getpostman.com/view/28559046/2s9YkrZyf9",
   },
   {
-    id: 13,
+    id: 14,
     title: "Saraha node js api",
     description: "",
     image: "/images/projects/saraha.png",
@@ -123,7 +132,7 @@ const projectsData = [
     previewUrl: "https://documenter.getpostman.com/view/28559046/2s9YJaZQGg",
   },
   {
-    id: 14,
+    id: 15,
     title: "Upvote node js api",
     description: "",
     image: "/images/projects/upvote.png",
@@ -132,7 +141,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 15,
+    id: 16,
     title: "EveryDay Flowers Blog",
     description: "Beautifully designed, responsive blog built entirely with HTML and CSS.",
     image: "/images/projects/EveryDayFLowers.png",
