@@ -43,15 +43,15 @@ const projectsData = [
     gitUrl: "https://github.com/HebaHamdan2/portfolio",
     previewUrl: "https://hebahamdan.vercel.app/",
   },
-  {
-    id: 6,
-    title: "My Personal Blog using Nextjs",
-    description: "Welcome to my blog, built with Next.js! This project includes an admin dashboard for easy management of posts. Admin users can effortlessly add and delete articles across lifestyle, technology, and startup topics.",
-    image: "/images/projects/blogApp.png",
-    tag: ["All", "Full Stack"],
-    gitUrl: "https://github.com/HebaHamdan2/MyPersonalBlog-App",
-    previewUrl: "https://hebablogsapp-hebas-projects-a9daf66d.vercel.app/",
-  },
+  // {
+  //   id: 6,
+  //   title: "My Personal Blog using Nextjs",
+  //   description: "Welcome to my blog, built with Next.js! This project includes an admin dashboard for easy management of posts. Admin users can effortlessly add and delete articles across lifestyle, technology, and startup topics.",
+  //   image: "/images/projects/blogApp.png",
+  //   tag: ["All", "Full Stack"],
+  //   gitUrl: "https://github.com/HebaHamdan2/MyPersonalBlog-App",
+  //   previewUrl: "https://hebablogsapp-hebas-projects-a9daf66d.vercel.app/",
+  // },
   
   {
     id: 5,
